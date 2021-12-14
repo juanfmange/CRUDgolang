@@ -1,0 +1,40 @@
+{{define "crear"}}
+{{ template "header"}}
+
+
+<div class="card">
+    <div class="card-header">
+        Empleados
+    </div>
+
+    <div class="card-body">
+        <form method="post" action="/insertar">
+
+          <div class="form-group">
+            <label for="">ID:</label>
+            <input type="text" class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Inserte su ID</small>
+          </div>
+            
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input type="text"
+                class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Escribe tu nombre</small>
+            </div>
+
+            <div class="form-group">
+              <label for="">Correo:</label>
+              <input type="text"
+                class="form-control" name="correo" id="correo" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Escribe tu correo</small>
+            </div>
+
+            <button type="submit" class="btn btn-success">Agregar nuevo empleado</button>
+            <a name="" id="" class="btn btn-primary" href="/" role="button">Cancelar</a>
+
+        </form>
+    </div>
+
+{{ template "pie" }}
+{{end}}

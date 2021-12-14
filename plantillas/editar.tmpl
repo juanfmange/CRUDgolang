@@ -1,0 +1,44 @@
+{{define "editar" }}
+{{ template "header"}}
+
+<div class="card">
+    <div class="card-header">
+        Empleados
+    </div>
+
+    <div class="card-body">
+        <form method="post" action="/actualizar">
+        <div class="form-group">
+    <label class="sr-only" for="inputName">Clave de empleado</label>
+    <input type="hidden" value="{{.Id}}" class="form-control" name="id" id="id" placeholder="">
+    </div>
+
+          <div class="form-group">
+            <label for="">ID:</label>
+            <input type="text" class="form-control" name="id" value="{{.Id}}" id="id" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Inserte su ID</small>
+          </div>
+            
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input type="text"
+                class="form-control" name="nombre" value="{{.Nombre}}" id="nombre" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Escribe tu nombre</small>
+            </div>
+
+            <div class="form-group">
+              <label for="">Correo:</label>
+              <input type="text"
+                class="form-control" name="correo" value="{{.Correo}}" id="correo" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Escribe tu correo</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Modificar</button>
+            <a name="" id="" class="btn btn-primary" href="/" role="button">Cancelar</a>
+
+
+        </form>
+    </div>
+
+{{ template "pie" }}
+{{end}}
